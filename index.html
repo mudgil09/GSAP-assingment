@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Webpage</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Our Hospital</h1>
+  </header>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Emergency Care</li>
+      <li>Primary Care</li>
+      <li>Surgical Services</li>
+      <li>Specialty Clinics</li>
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mollis augue auctor mauris gravida eleifend.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>123 Hospital Street, City, Country</p>
+    <p>Phone: 123-456-7890</p>
+    <p>Email: info@hospital.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 20XX Our Hospital. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script>
+    gsap.from("h1", {
+      opacity: 0,
+      y: -50,
+      duration: 1
+    });
+
+    gsap.from("#services ul li", {
+      opacity: 0,
+      y: 50,
+      duration: 0.5,
+      stagger: 0.2
+    });
+
+    gsap.from("#about", {
+      opacity: 0,
+      x: -100,
+      duration: 1,
+      scrollTrigger: {
+        trigger: "#about",
+        start: "top 80%"
+      }
+    });
+
+    gsap.from("#contact", {
+      opacity: 0,
+      x: 100,
+      duration: 1,
+      scrollTrigger: {
+        trigger: "#contact",
+        start: "top 80%"
+      }
+    });
+  </script>
+</body>
+</html>
